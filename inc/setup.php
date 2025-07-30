@@ -25,6 +25,11 @@ function theme_setup() {
 	 * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#disabling-the-default-block-patterns
 	 */
 	remove_theme_support( 'core-block-patterns' );
+
+	register_block_pattern_category( 'fueflo', array( 
+		'label'       => __( 'Fueflo', 'fueflo' ),
+		'description' => __( 'Custom patterns for Theme Name.', 'fueflo' )
+	) );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\theme_setup' );
 
